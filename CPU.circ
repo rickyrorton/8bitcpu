@@ -77,7 +77,7 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="128000.0"/>
+    <a name="simulationFrequency" val="2048000.0"/>
     <comp lib="0" loc="(110,190)" name="Tunnel">
       <a name="label" val="reset"/>
     </comp>
@@ -98,24 +98,24 @@
     <comp lib="0" loc="(140,320)" name="Tunnel">
       <a name="label" val="reset"/>
     </comp>
-    <comp lib="0" loc="(210,630)" name="Tunnel">
-      <a name="facing" val="east"/>
+    <comp lib="0" loc="(220,70)" name="Tunnel">
       <a name="label" val="clk"/>
     </comp>
-    <comp lib="0" loc="(220,70)" name="Tunnel">
+    <comp lib="0" loc="(240,600)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ZF"/>
+    </comp>
+    <comp lib="0" loc="(240,630)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CF"/>
+    </comp>
+    <comp lib="0" loc="(240,660)" name="Tunnel">
+      <a name="facing" val="east"/>
       <a name="label" val="clk"/>
     </comp>
     <comp lib="0" loc="(250,510)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="reset"/>
-    </comp>
-    <comp lib="0" loc="(250,610)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CF"/>
-    </comp>
-    <comp lib="0" loc="(250,650)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="ZF"/>
     </comp>
     <comp lib="0" loc="(270,120)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -335,11 +335,15 @@
     <wire from="(140,90)" to="(140,160)"/>
     <wire from="(140,90)" to="(150,90)"/>
     <wire from="(200,70)" to="(210,70)"/>
-    <wire from="(210,630)" to="(300,630)"/>
     <wire from="(210,70)" to="(210,220)"/>
     <wire from="(210,70)" to="(220,70)"/>
+    <wire from="(240,600)" to="(250,600)"/>
+    <wire from="(240,630)" to="(300,630)"/>
+    <wire from="(240,660)" to="(250,660)"/>
     <wire from="(250,510)" to="(270,510)"/>
+    <wire from="(250,600)" to="(250,610)"/>
     <wire from="(250,610)" to="(300,610)"/>
+    <wire from="(250,650)" to="(250,660)"/>
     <wire from="(250,650)" to="(300,650)"/>
     <wire from="(260,550)" to="(260,670)"/>
     <wire from="(260,550)" to="(560,550)"/>
@@ -1462,8 +1466,8 @@
       <circ-port dir="in" pin="100,230" x="50" y="100"/>
       <circ-port dir="in" pin="110,170" x="50" y="60"/>
       <circ-port dir="in" pin="430,280" x="50" y="140"/>
+      <circ-port dir="in" pin="530,170" x="50" y="120"/>
       <circ-port dir="in" pin="530,200" x="50" y="80"/>
-      <circ-port dir="in" pin="530,230" x="50" y="120"/>
       <circ-port dir="out" pin="1060,220" x="270" y="60"/>
       <circ-port dir="out" pin="1060,240" x="270" y="80"/>
       <circ-port dir="out" pin="1060,260" x="270" y="100"/>
@@ -1606,13 +1610,13 @@
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </comp>
+    <comp lib="0" loc="(530,170)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ZF"/>
+    </comp>
     <comp lib="0" loc="(530,200)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="CF"/>
-    </comp>
-    <comp lib="0" loc="(530,230)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="label" val="ZF"/>
     </comp>
     <comp lib="0" loc="(610,160)" name="Splitter">
       <a name="appear" val="right"/>
@@ -1649,12 +1653,39 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 9 16
 4100 c40 6*0 4100 c40 4200 820 4*0
-4100 c40 4200 802 28 0 0 0
+4100 c40 4200 802 29 0 0 0
+4100 c40 4200 802 2b 0 0 0
+4100 c40 4200 1010 4*0 4100 c40 220
+5*0 4100 c40 280 5*0 4100 c40 6*0
 4100 c40 6*0 4100 c40 6*0 4100 c40
 6*0 4100 c40 6*0 4100 c40 6*0 4100
+c40 6*0 4100 c40 2010 5*0 4100 c40
+8000 5*0 4100 c40 6*0 4100 c40 4200
+820 4*0 4100 c40 4200 802 29 0
+0 0 4100 c40 4200 802 2b 0
+0 0 4100 c40 4200 1010 4*0 4100
+c40 220 5*0 4100 c40 280 5*0 4100
+c40 6*0 4100 c40 280 5*0 4100 c40
+6*0 4100 c40 6*0 4100 c40 6*0 4100
+c40 6*0 4100 c40 6*0 4100 c40 2010
+5*0 4100 c40 8000 5*0 4100 c40 6*0
+4100 c40 4200 820 4*0 4100 c40 4200
+802 29 0 0 0 4100 c40 4200
+802 2b 0 0 0 4100 c40 4200
+1010 4*0 4100 c40 220 5*0 4100 c40
+280 5*0 4100 c40 280 5*0 4100 c40
+6*0 4100 c40 6*0 4100 c40 6*0 4100
 c40 6*0 4100 c40 6*0 4100 c40 6*0
+4100 c40 2010 5*0 4100 c40 8000 5*0
+4100 c40 6*0 4100 c40 4200 820 4*0
+4100 c40 4200 802 29 0 0 0
+4100 c40 4200 802 2b 0 0 0
+4100 c40 4200 1010 4*0 4100 c40 220
+5*0 4100 c40 280 5*0 4100 c40 280
+5*0 4100 c40 280 5*0 4100 c40 6*0
 4100 c40 6*0 4100 c40 6*0 4100 c40
-6*0 4100 c40 2010 5*0 4100 c40
+6*0 4100 c40 6*0 4100 c40 2010 5*0
+4100 c40 8000
 </a>
       <a name="dataWidth" val="16"/>
     </comp>
@@ -1698,11 +1729,11 @@ c40 6*0 4100 c40 6*0 4100 c40 6*0
     <wire from="(500,110)" to="(590,110)"/>
     <wire from="(500,120)" to="(590,120)"/>
     <wire from="(500,130)" to="(590,130)"/>
-    <wire from="(530,200)" to="(540,200)"/>
-    <wire from="(530,230)" to="(550,230)"/>
-    <wire from="(540,140)" to="(540,200)"/>
+    <wire from="(530,170)" to="(540,170)"/>
+    <wire from="(530,200)" to="(550,200)"/>
+    <wire from="(540,140)" to="(540,170)"/>
     <wire from="(540,140)" to="(590,140)"/>
-    <wire from="(550,150)" to="(550,230)"/>
+    <wire from="(550,150)" to="(550,200)"/>
     <wire from="(550,150)" to="(590,150)"/>
     <wire from="(850,210)" to="(870,210)"/>
     <wire from="(890,220)" to="(1060,220)"/>

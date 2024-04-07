@@ -1,0 +1,37 @@
+8 bit CPU designed by Rishi Sriram, based off of SAP architecture described in Digital Computer Electronics by Albert Paul Malvino and Jerald A. Brown.
+
+Microcode instructions:
+MI- Memory address register in
+RI- RAM in
+RO- RAM out
+II- Instruction register in
+IO- Instruction register out
+CO- Program counter out
+J - Program counter IN (Jump)
+CE- Program counter increment
+AI- Accumulator in
+AO- Accumulator out
+EO- Sum out
+SU- Subtract
+BI- B register in
+OI- Output register in
+FI- Flags register in
+HLT- Halt
+
+Instruction set:
+0000- NOP
+0001- LDA
+0010- ADD
+0011- SUB
+0100- STA
+0101- LDI
+0110- JMP
+0111- JEC
+1000- JEZ
+1001- 
+1010- 
+1011- 
+1100- 
+1101- 
+1110- OUT
+1111- HLT
