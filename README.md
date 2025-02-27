@@ -1,5 +1,5 @@
 ## 8 Bit CPU
-8 bit CPU implented and simulated by Rishi Sriram, based off of SAP architecture described in the book Digital Computer Electronics by Albert Paul Malvino and Jerald A. Brown.
+8 bit CPU implented and simulated by Rishi Sriram, based off of SAP architecture described in the book Digital Computer Electronics by Albert Paul Malvino and Jerald A. Brown. Inspired by Ben Eater's [8-bit CPU built entirely on breadboards](https://eater.net/8bit)
 
 ![image](https://github.com/rickyrorton/8bitcpu/assets/74890659/bf8e8a7b-b5bb-4ecf-acdc-99b75b04d94f)
 
